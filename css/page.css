@@ -1,0 +1,438 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors yufangyang (you@example.org)
+ * @date    2015-02-11 13:48:52
+ * @version $Id$
+ */
+
+html, body, div, span, applet, object, iframe, table, caption, 
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, 
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, 
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend { 
+    vertical-align: baseline; 
+    font-family: inherit; 
+    font-weight: inherit; 
+    font-style: inherit; 
+    outline: 0; 
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+} 
+:focus { 
+    outline: 0; 
+} 
+body { 
+    line-height: 1; 
+    color: black; 
+    background: #1a1a1a;
+} 
+ol, ul { 
+    list-style: none; 
+} 
+table { 
+    border-collapse: separate; 
+    border-spacing: 0; 
+} 
+caption, th, td { 
+    font-weight: normal; 
+    text-align: left; 
+} 
+blockquote:before, blockquote:after, q:before, q:after { 
+    content: “”; 
+} 
+blockquote, q { 
+    quotes: “” “”; 
+}
+a{
+    text-decoration: none;
+}
+html,body,.wrap{
+    height: 100%;
+}
+.wrap{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.p1{
+    background: url(../images/bg.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.autoimg{
+    width:100%;
+    height:auto;
+}
+.shu{
+    width: 53.3%;
+    position: absolute;
+    left: 24%;
+    top: 10rem;
+    -webkit-animation: flipInY 1s both;
+}
+.head{
+     width: 100%;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    -webkit-animation:bounceInDown 1s 1s both;
+}
+.wenzi2{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 27rem; 
+}
+.yao{
+    width: 12%;
+    position: absolute;
+    left:44%;
+    top: 29rem; 
+    -webkit-animation:wobble1 3s .2s infinite both;
+}
+.logo{
+    width: 25%;
+    position: absolute;
+    left: 38%;
+    top: 33rem; 
+    -webkit-animation:bounceInUp 1s .5s both;
+}
+.bao{
+    width: 8.6%;
+    height: 2.46rem;
+    position: absolute;
+}
+.bao i{
+    background: url(../images/hongbao.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.bao:nth-child(1){
+    top:11rem;
+    -webkit-animation:bounceInDown 1s 1s both;
+    left: 48%;
+}
+.bao:nth-child(2){
+    top:12.7rem;
+    -webkit-animation:bounceInDown 1s 1.2s both;
+    left: 56%;
+}
+.bao:nth-child(3){
+    top:14rem;
+    -webkit-animation:bounceInDown 1s 1.4s both;
+    left: 40%;
+}
+.bao:nth-child(4){
+    top:15rem;
+    -webkit-animation:bounceInDown 1s 1.6s both;
+    left: 59%;
+}
+.bao:nth-child(5){
+    top:16rem;
+    -webkit-animation:bounceInDown 1s 1.8s both;
+    left:32%;
+}
+.bao:nth-child(6){
+    top:18rem;
+    -webkit-animation:bounceInDown 1s 2s both;
+    left: 65%;
+}
+.bao:nth-child(7){
+    top:18.5rem;
+    -webkit-animation:bounceInDown 1s 2.2s both;
+    left: 45%;
+}
+.bao:nth-child(8){
+    top:18.5rem;
+    -webkit-animation:bounceInDown 1s 2.4s both;
+    left: 28%;
+}
+.bao:nth-child(9){
+    top:20.5rem;
+    -webkit-animation:bounceInDown 1s 2.6s both;
+    left: 70%;
+}
+.bao:nth-child(10){
+    top:20.7rem;
+    -webkit-animation:bounceInDown 1s 2.8s both;
+    left: 22%;
+}
+.bao:nth-child(1) i{
+    -webkit-transform: rotateZ(20deg);
+}
+.bao:nth-child(2) i{
+    -webkit-transform: rotateZ(-20deg);
+}
+.bao:nth-child(3) i{
+    -webkit-transform: rotateZ(-20deg);
+}
+.bao:nth-child(4) i{
+    -webkit-transform: rotateZ(20deg);
+}
+.bao:nth-child(5) i{
+    -webkit-transform: rotateZ(30deg);
+}
+.bao:nth-child(6) i{
+    -webkit-transform: rotateZ(10deg);
+}
+.bao:nth-child(7) i{
+    -webkit-transform: rotateZ(-10deg);
+}
+.bao:nth-child(8) i{
+    -webkit-transform: rotateZ(-30deg);
+}
+.bao:nth-child(9) i{
+    -webkit-transform: rotateZ(30deg);
+}
+.bao:nth-child(10) i{
+    -webkit-transform: rotateZ(30deg);
+}
+
+.yao1{
+    width: 12%;
+    position: absolute;
+    left:74%;
+    top: 27.8rem; 
+    -webkit-animation:bounceInUp 1s .5s both;
+}
+.btn1{
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 28rem;
+    height: 1.8rem;
+    -webkit-animation:bounceInUp 1s .5s both;
+}
+.btn2{
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 30.2rem;
+    height: 1.8rem;
+    -webkit-animation:bounceInUp 1s .5s both;
+}
+.baiban{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.yaoqianshu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.p2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-animation:bounceInUp1 1s .1s both;
+}
+.xin1{
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    z-index: 2;
+}
+.xin2{
+    position: absolute;
+    left: 0;
+    bottom: -.3rem;
+    z-index: 1;
+}
+.xin3 img{
+    position: absolute;
+    left: 0;
+    bottom: 10.4rem;
+    z-index: 3;
+    -webkit-transform-origin:50% 98%;
+}
+.xin4{
+    position: absolute;
+    left: 0;
+    bottom: 10.8rem;
+    z-index: 3;
+    -webkit-transform-origin:50% 100%;
+    -webkit-transform: rotateX(180deg);
+}
+.xinzi{
+    position: absolute;
+    left: 0;
+    top: 3rem;
+}
+.txt1{
+    color: #747272;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 7rem;
+    font-size: 1rem;
+    z-index: 2;
+}
+.txt2{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: 11rem;
+    color: #cdb482;
+    font-size: 1.7rem;
+    z-index: 2;
+    background: url(../images/kuang.png) 0 0 no-repeat;
+    background-size: 100%;
+    height: 5rem;
+    line-height: 4rem;
+}
+.btn3{
+    position: absolute;
+    width: 45%;
+    text-align: center;
+    left: 28%;
+    top: 19rem;
+    font-size: 1rem;
+    z-index: 2;
+}
+.btn6{
+    position: absolute;
+    width: 45%;
+    text-align: center;
+    left: 28%;
+    top: 22rem;
+    font-size: 1rem;
+    z-index: 2;
+}
+.con{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-animation:bounceInUp 1s 2s both;
+}
+.p3{
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg2.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.btn4{
+    width: 40%;
+    position: absolute;
+    top: 15rem;
+    left: 30%;
+}
+.btn5{
+    width: 40%;
+    position: absolute;
+    top: 19rem;
+    left: 30%;
+}
+.txt3{
+    color: #fcefbb;
+    font-size: 1.2rem;
+    font-family: "微软雅黑";
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
+.jifenbox{
+    width: 80%;
+    overflow: hidden;
+    padding: 2rem 10%;
+}
+.jifen{
+    width: 29%;
+    height: 3rem;
+    margin: 0 2%;
+    line-height: 2.2rem;
+    background: url(../images/jifen.png) 0 0 no-repeat;
+    background-size: 100%;
+    float: left;
+}
+.jifen li:nth-child(1){
+    width: 45%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #efe7db;
+    float: left;
+}
+.jifen li:nth-child(2){
+    width: 25%;
+    padding-left: 30%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #cea771;
+    float: left;
+    font-family: "微软雅黑";
+}
+.txt4{
+    width: 100%;
+    text-align: center;
+    margin-top: 14rem;
+    color: #fcd000;
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+.txt4 a{
+    color: #fcd000;
+}
+.logo2{
+    width: 30%;
+    margin-top: 1rem;
+    margin-left: 35%;
+}
+.cha{
+    width: 7%;
+    position: absolute;
+    right: 2%;
+    top: .5rem;
+}
+.share{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+.loading{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #222;
+    z-index: 99999;
+    text-align: center;
+}
+.loading div{
+    margin-top: 60%;
+    color: #fff;
+}
+.logo3{
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    top: 7rem;
+}

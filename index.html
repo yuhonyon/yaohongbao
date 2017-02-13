@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link href="css/page.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script>
+	$(function(){
+		var loadind=0;
+		var imgind=0;
+		var loadsum=$("img").length;
+		var loadtimer=setInterval(function(){
+			if(loadind<100){
+				loadind++;
+				$("#baifen").html(loadind);
+			}
+			else{
+				clearInterval(loadtimer);
+			}
+		},50)
+		$("img").each(function(){
+			$(this).attr("src",$(this).attr("data-src")).load(function(){
+				imgind++;
+				if(loadind<=parseInt(imgind/loadsum*100)){
+					loadind=parseInt(imgind/loadsum*100)
+					$("#baifen").html(loadind);
+				}
+				else{
+					clearInterval(loadtimer);
+				}
+			})
+		})
+	})
+</script>
+</head>
+<body>
+	<div class="loading">
+		<div><span id="baifen">0</span>%</div>
+	</div>
+    <div class="wrap">
+    <!-- 分享 -->
+    	<div class="share">
+    		<img src="images/share.png" class="autoimg" alt="">
+    	</div>
+    	<!-- 首页 -->
+    	<section class="p1">
+    		<header class="head"><img src="images/wenzi1.png" alt="" class="autoimg"></header>
+    		<div style="display:none;" class="wenzi2"><img src="images/wenzi2.png" class="autoimg" alt=""></div>
+    		<div style="display:none;" class="yao"><img src="images/yao.png" class="autoimg" alt=""></div>
+    		<div class="yao1"><img src="images/yao.png" class="autoimg" alt=""></div>
+    		<div class="logo"><img src="images/logo2.png" class="autoimg" alt=""></div>
+    		<div class='yaoqianshu'>
+    			<div class="shu"><img src="images/shu.png" class="autoimg" alt=""></div>
+	    		<ul>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    			<li class="bao"><i></i></li>
+	    		</ul>
+    		</div>
+    		<div class="btn1"><img src="images/btn1.png" class="autoimg" alt=""></div>
+    		<div class="btn2"><img src="images/btn2.png" class="autoimg" alt=""></div>
+    		<div class="baiban"></div>
+    	</section>
+    	<!-- 信件 -->
+    	<section class="p2" style="display:none;">
+    		
+    		<div class="xin2"><img src="images/xin2.png" class="autoimg" alt=""></div>
+    		<div class="xin1"><img src="images/xin1.png" class="autoimg" alt=""><div class="logo3"><img src="images/logo2.png" class="autoimg" alt=""></div></div>
+    		<div class="xin3"><img src="images/xin3.png" class="autoimg" alt=""></div>
+    		<div class="con">
+    			<div class="xinzi"><img src="images/xinzi.png" class="autoimg" alt=""></div>
+    			<div class="txt1">抱歉,您今天的机会已用完</div>
+    			<div class="txt2">明天再来吧</div>
+    			<div class="btn3"><img src="images/btn3.png" class="autoimg" alt=""></div>
+    			<div class="btn6"><img src="images/btn6.png" class="autoimg" alt=""></div>
+    		</div>
+    		
+    	</section>
+    	<!-- 我的红包 -->
+    	<section class="p3" style="display:none;">
+    		<div class="cha"><img src="images/cha.png" class="autoimg" alt=""></div>
+    		<div class="txt3">恭喜!您已经获得了1个红包礼物</div>
+    		<div class="jifenbox">
+    			<ul class="jifen">
+	    			<li>50分</li>
+	    			<li>3</li>
+	    		</ul>
+	    		<ul class="jifen">
+	    			<li>100分</li>
+	    			<li>1</li>
+	    		</ul>
+	    		<ul class="jifen">
+	    			<li>50分</li>
+	    			<li>1</li>
+	    		</ul>
+	    		<ul class="jifen">
+	    			<li>50分</li>
+	    			<li>2</li>
+	    		</ul>
+	    		<ul class="jifen">
+	    			<li>50分</li>
+	    			<li>1</li>
+	    		</ul>
+    		</div>
+    		<div class="btn4"><img src="images/btn4.jpg" class="autoimg" alt=""></div>
+    		<div class="btn5"><img src="images/btn5.jpg" class="autoimg" alt=""></div>
+    		<div class="txt4">
+    			<p>礼品请前往广州佛山岭南新天地销售中心</p>
+    			<p>佛山######## <a href="tel">02066528899</a></p>
+    		</div>
+    		<div class="logo2"><img src="images/logo2.png" class="autoimg" alt=""></div>
+    	</section>
+    </div>
+</body>
+<script type="text/javascript">
+var ind=5;  //摇一摇次数
+var flag=true; //能否摇一摇
+//挑战摇一摇
+$(".btn1").bind("click",function(){
+	$(".baiban").fadeIn("100");	
+	P1fn()
+})
+//关闭我的红包
+$(".cha").bind("click",function(){
+	$(".p3").fadeOut("100");	
+})
+//查看我的红包
+$(".btn2,.btn3").bind("click",function(){	
+	$(".p3").fadeIn("100");	
+})
+//继续摇一摇
+$(".btn4,.btn6").bind("click",function(){
+	$(".p3,.p2").fadeOut("100");
+	flag=true;
+	P1fn();
+})
+//分享
+$(".btn5").bind("click",function(){
+	$(".share").fadeIn("100");
+})
+$(".share").bind("click",function(){
+	$(".share").fadeOut("100");
+})
+//进入摇一摇页面
+function P1fn(){
+	setTimeout(function(){
+		$(".btn1,.btn2,.yao1,.head").hide();
+		$(".wenzi2,.yao").show();
+		$(".baiban").fadeOut("100");	
+	},100)
+	$(".yaoqianshu").attr('style',"-webkit-animation: flipInY 1s .2s both;");
+	handShake();
+}
+//摇一摇
+function handShake(){
+  if(window.DeviceMotionEvent){
+	  var speed = 10;
+	  var x = y = z = lastX = lastY = lastZ = 0;
+	  window.addEventListener('devicemotion', function(){
+		  var acceleration =event.accelerationIncludingGravity;
+		  x = acceleration.x;
+		  y = acceleration.y;
+		  if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed){
+			 	if(flag){
+				xinFn();
+				}
+				flag = false;
+		  }
+		  lastX = x;
+		  lastY = y;
+	  }, false);
+  }
+}
+//摇一摇成功
+function xinFn(){
+	ind--;
+	if(ind>0){
+		$(".txt1").html("您还有"+ind+"次抢红包机会")
+		$(".txt2").html("50积分")
+	}
+	else{
+		$(".txt1").html("抱歉,您今天的机会已用完")
+		$(".txt2").html("明天再来吧")
+	}
+	$(".bao").attr('style',"-webkit-transform-origin:0% 0%;-webkit-animation: swing1 1s .2s both;");
+	setTimeout(function(){
+		$(".bao").eq(parseInt(Math.random()*10)).attr('style',"-webkit-animation: louxia 2s both;");
+		setTimeout(function(){
+			$(".p2").show();
+			$(".xin3 img").attr('style',"-webkit-animation:dakai 1.5s 1.1s both;");
+			setTimeout(function(){
+				$(".xin3 img").attr('style',"z-index:1;");
+				$(".bao").attr("style","");
+			},2400)
+		},100)
+	},1200)
+}
+$(window).load(function(){
+	$(".loading").fadeOut("400");
+})
+</script>
+<script src="js/page.js"></script>
+</html>
